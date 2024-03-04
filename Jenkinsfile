@@ -1,18 +1,11 @@
-@Library('shared-library') _
-
-pipeline{
+pipeline {
     agent any
 
-    stages{
-        
-        stage('Git SCM'){
-            
-            steps{
-            gitCheckout{
-                branch: "main",
-                url: "https://github.com/Skywalker4123/shared-library.git"
-            }    
-            } 
+    stages {
+        stage('Git SCM') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Skywalker4123/java-webapp.git'
+            }
         }
     }
 }
